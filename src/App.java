@@ -1,4 +1,4 @@
-
+import views.SalesView;
 
 // Входная точка в программу/приложение
 public class App {
@@ -7,6 +7,8 @@ public class App {
 
         // Здесь создайте экземпляры Model, View и Controller,
         // на основании соответствующих конструкторов.
+
+        SalesView salesView = new SalesView("Apple", 100, 15);
 //        Product model = создать экземпляр
 //        SalesView view = создать экземпляр
 //        ProductController controller = создать экземпляр

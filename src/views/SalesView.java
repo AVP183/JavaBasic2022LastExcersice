@@ -15,6 +15,11 @@ public class SalesView {
 
     // Здесь, создайте конструктор данного класса,
     // который в параметре содержит переменную типа модели.
+    public SalesView(String name, int quantity, double price){
+        this.name = name;
+        this.quantity = quantity;
+        this.price = price;
+    }
 
 
     public void getInputs() {
