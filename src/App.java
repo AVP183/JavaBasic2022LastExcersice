@@ -16,13 +16,13 @@ public class App {
 //        SalesView view = создать экземпляр
         SalesView salesView = new SalesView("Apple", 100, 15);
 //        ProductController controller = создать экземпляр
-//        ProductController controller = new ProductController(Product, SalesView);
+        ProductController controller = new ProductController(product, salesView);
 
         // Запуск программы/приложения.
 
         // Раскомментированный код будет корректным после
         // правильной настройки приложения
 
-//         controller.runApp();
+         controller.runApp();
     }
 }

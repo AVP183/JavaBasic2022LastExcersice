@@ -15,9 +15,6 @@ public class Product implements Income, Fiscal {
     // Налоговоу ставку объявите в виде константы
     // здесь ...
     private final int taxRate = 5;
-    private double profit;
-    private double taxeFromSale;
-    private double clearProfit;
 
     // Обеспечьте доступ к полям модели через getters и setters
     // здесь ...
@@ -51,23 +48,20 @@ public class Product implements Income, Fiscal {
 
     @Override
     public double calculateProfit() {
-        profit = quantity * price;
-        return profit;
+        return quantity * price;
     }
 
     @Override
     // Расчёт суммы налога с продаж.
     // здесь ...
     public double calculateTaxFromSale() {
-        taxeFromSale = profit * taxRate;
-        return taxeFromSale;
+        return calculateProfit() * taxRate;
     }
 
     @Override
     // Расчёт чистого дохода, после уплаты налога.
     // здесь ...
     public double calculateClearProfit() {
-        clearProfit = profit - taxeFromSale;
-        return clearProfit;
+        return calculateProfit() - calculateTaxFromSale();
     }
 }

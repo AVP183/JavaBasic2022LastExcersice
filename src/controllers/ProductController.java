@@ -1,12 +1,10 @@
 package controllers;
 
-import base.Fiscal;
-import base.Income;
 import models.Product;
 import views.SalesView;
 
 // Controller
-public class ProductController implements Fiscal, Income {
+public class ProductController {
 
     Product model;
     SalesView view;
@@ -23,30 +21,24 @@ public class ProductController implements Fiscal, Income {
 
         // Здесь, реализуйте:
         // 1) получение имени товара через модель;
-        String name = SalesView.
+        model.getName();
 
         // 2) вызов методов расчетов доходов и налога;
-        @Override
-        public double calculateTaxFromSale () {
-            return 0;
-        }
+        model.calculateProfit();
 
-        @Override
-        public double calculateProfit () {
-            return 0;
-        }
+        model.calculateTaxFromSale();
 
-        @Override
-        public double calculateClearProfit () {
-            return 0;
-        }
+        model.calculateClearProfit();
 
         // 3) округление расчетных значений;
 
 
         // 4) вывод расчетов по заданному формату.
 
-        String output = "[здесь должен быть вывод по формату]";
+        String output = "Наименование товара: " + model.getName() + "\n"
+                + "Общий доход (грн.):" + model.calculateProfit() + "\n"
+                + "Сумма налога (грн.):" + model.calculateTaxFromSale() + "\n"
+                + "Чистый доход (грн.):" + model.calculateClearProfit();
 
         view.getOutput(output);
     }
