@@ -46,21 +46,16 @@ public class Product implements Income, Fiscal {
     }
 
     // Переопределите методы реализуемых интерфейсов.
-    @Override
-    public int fiscalCalculate() {
-        return 0;
-    }
-
     // Расчёт дохода от продаж, до уплаты налога.
     // здесь ...
-    //    Доход = Количество товара х Цена.
-    //Товар - штучный, т.е. в штуках.
 
+    @Override
     public double calculateProfit() {
         profit = quantity * price;
         return profit;
     }
 
+    @Override
     // Расчёт суммы налога с продаж.
     // здесь ...
     public double calculateTaxFromSale() {
@@ -68,6 +63,7 @@ public class Product implements Income, Fiscal {
         return taxeFromSale;
     }
 
+    @Override
     // Расчёт чистого дохода, после уплаты налога.
     // здесь ...
     public double calculateClearProfit() {
