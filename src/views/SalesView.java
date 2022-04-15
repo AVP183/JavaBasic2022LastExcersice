@@ -3,12 +3,11 @@ package views;
 
 import models.Product;
 import utils.Validator;
-
 import java.util.Scanner;
+
 
 // View
 public class SalesView {
-
 
     String title;
     String name;
@@ -34,19 +33,20 @@ public class SalesView {
         System.out.print(title);
         // ввода соответствующего значения, валидацью значения
         // через валидатор, установку валидного значения через модель.
-        product.setName(Validator.validateName(scanner));
+        name = Validator.validateName(scanner);
+        product.setName(name);
 
         // Здесь, реализуйте вывод сообщения о необходимсоти
         title = "Введите количество: ";
         System.out.print(title);
         // ввода соответствующего значения, валидацью значения
         // через валидатор, установку валидного значения через модель.
-        product.setQuantity(Validator.validateQuantityInput(scanner));
+        quantity = Validator.validateQuantityInput(scanner);
 
 
         title = "Введите цену: ";
         System.out.print(title);
-        product.setPrice(Validator.validatePriceInput(scanner));
+        price = Validator.validatePriceInput(scanner);
 
         // Здесь, реализуйте вывод сообщения о необходимсоти
         // ввода соответствующего значения, валидацью значения
