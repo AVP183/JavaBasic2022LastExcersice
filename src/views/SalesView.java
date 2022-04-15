@@ -18,10 +18,10 @@ public class SalesView extends Product {
 
     // Здесь, создайте конструктор данного класса,
     // который в параметре содержит переменную типа модели.
-    public SalesView(super., int quantity, double price) {
-        this.name = name;
-        this.quantity = quantity;
-        this.price = price;
+    public SalesView() {
+        this.name = super.getName();
+        this.quantity = super.getQuantity();
+        this.price = super.getPrice();
     }
 
 
