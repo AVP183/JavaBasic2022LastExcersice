@@ -12,11 +12,11 @@ public class App {
 
 
 //        Product model = создать экземпляр
-        Product product = new Product();
+        Product model = new Product();
 //        SalesView view = создать экземпляр
-        SalesView salesView = new SalesView();
+        SalesView view = new SalesView(model.getName(), model.getQuantity(), model.getPrice());
 //        ProductController controller = создать экземпляр
-        ProductController controller = new ProductController(product, salesView);
+        ProductController controller = new ProductController(model, view);
 
         // Запуск программы/приложения.
 

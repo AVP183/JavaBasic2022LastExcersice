@@ -36,9 +36,9 @@ public class ProductController {
         // 4) вывод расчетов по заданному формату.
 
         String output = "Наименование товара: " + model.getName() + "\n"
-                + "Общий доход (грн.):" + model.calculateProfit() + "\n"
-                + "Сумма налога (грн.):" + model.calculateTaxFromSale() + "\n"
-                + "Чистый доход (грн.):" + model.calculateClearProfit();
+                + "Общий доход (грн.): " + model.calculateProfit() + "\n"
+                + "Сумма налога (грн.): " + model.calculateTaxFromSale() + "\n"
+                + "Чистый доход (грн.): " + model.calculateClearProfit();
 
         view.getOutput(output);
     }
