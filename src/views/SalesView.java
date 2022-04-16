@@ -1,9 +1,9 @@
 package views;
 
 
-
 import models.Product;
 import utils.Validator;
+
 import java.util.Scanner;
 
 
@@ -15,14 +15,14 @@ public class SalesView {
     int quantity;
     double price;
     Scanner scanner;
-
+    Product model;
 
     // Здесь, создайте конструктор данного класса,
     // который в параметре содержит переменную типа модели.
     public SalesView(Product model) {
-       this.name = model.getName();
-       this.quantity = model.getQuantity();
-       this.price = model.getPrice();
+        this.name = model.getName();
+        this.quantity = model.getQuantity();
+        this.price = model.getPrice();
     }
 
     public void getInputs() {
@@ -33,7 +33,7 @@ public class SalesView {
         System.out.print(title);
         // ввода соответствующего значения, валидацью значения
         // через валидатор, установку валидного значения через модель.
-        name = Validator.validateName(scanner);
+        model.setName(Validator.validateName(scanner));
 
         // Здесь, реализуйте вывод сообщения о необходимсоти
         title = "Введите количество: ";
