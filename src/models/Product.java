@@ -55,7 +55,7 @@ public class Product implements Income, Fiscal {
     // Расчёт суммы налога с продаж.
     // здесь ...
     public double calculateTaxFromSale() {
-        return calculateProfit() * taxRate;
+        return calculateProfit() * taxRate / 100;
     }
 
     @Override
