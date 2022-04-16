@@ -33,20 +33,19 @@ public class SalesView {
         System.out.print(title);
         // ввода соответствующего значения, валидацью значения
         // через валидатор, установку валидного значения через модель.
-        name = Validator.validateName(scanner);
-        product.setName(name);
+        product.setName(Validator.validateName(scanner));
 
         // Здесь, реализуйте вывод сообщения о необходимсоти
         title = "Введите количество: ";
         System.out.print(title);
         // ввода соответствующего значения, валидацью значения
         // через валидатор, установку валидного значения через модель.
-        quantity = Validator.validateQuantityInput(scanner);
+        product.setQuantity(Validator.validateQuantityInput(scanner));
 
 
         title = "Введите цену: ";
         System.out.print(title);
-        price = Validator.validatePriceInput(scanner);
+        product.setPrice(Validator.validatePriceInput(scanner));
 
         // Здесь, реализуйте вывод сообщения о необходимсоти
         // ввода соответствующего значения, валидацью значения
