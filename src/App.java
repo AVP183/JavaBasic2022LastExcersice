@@ -14,7 +14,7 @@ public class App {
 //        Product model = создать экземпляр
         Product model = new Product();
 //        SalesView view = создать экземпляр
-        SalesView view = new SalesView(model.getName(), model.getQuantity(), model.getPrice());
+        SalesView view = new SalesView(model);
 //        ProductController controller = создать экземпляр
         ProductController controller = new ProductController(model, view);
 
