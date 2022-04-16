@@ -1,6 +1,7 @@
 package views;
 
 
+
 import models.Product;
 import utils.Validator;
 import java.util.Scanner;
@@ -14,7 +15,7 @@ public class SalesView {
     int quantity;
     double price;
     Scanner scanner;
-//    Product product;
+
 
     // Здесь, создайте конструктор данного класса,
     // который в параметре содержит переменную типа модели.
