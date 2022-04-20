@@ -3,6 +3,9 @@ package controllers;
 import models.Product;
 import views.SalesView;
 
+import javax.xml.namespace.QName;
+import java.sql.SQLOutput;
+
 // Controller
 public class ProductController {
 

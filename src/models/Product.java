@@ -20,6 +20,7 @@ public class Product implements Income, Fiscal {
     // здесь ...
     public String getName() {
         return name;
+
     }
 
     public void setName(String name) {
