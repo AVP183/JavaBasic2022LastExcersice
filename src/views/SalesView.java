@@ -15,7 +15,7 @@ public class SalesView{
     int quantity;
     double price;
     Scanner scanner;
-    Product model;
+    private Product model;
 
     // Здесь, создайте конструктор данного класса,
     // который в параметре содержит переменную типа модели.

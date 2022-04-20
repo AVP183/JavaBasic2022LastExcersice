@@ -1,13 +1,12 @@
 package controllers;
 
 import models.Product;
+import utils.Rounder;
 import views.SalesView;
 
-import javax.xml.namespace.QName;
-import java.sql.SQLOutput;
 
 // Controller
-public class ProductController {
+public class ProductController extends Rounder{
 
     Product model;
     SalesView view;
@@ -34,14 +33,18 @@ public class ProductController {
         model.calculateClearProfit();
 
         // 3) округление расчетных значений;
+        double profit = rounderValue(model.calculateProfit());
 
+        double taxFromSale = rounderValue(model.calculateTaxFromSale());
+
+        double clearProfit = rounderValue(model.calculateClearProfit());
 
         // 4) вывод расчетов по заданному формату.
 
         String output = "Наименование товара: " + model.getName() + "\n"
-                + "Общий доход (грн.): " + model.calculateProfit() + "\n"
-                + "Сумма налога (грн.): " + model.calculateTaxFromSale() + "\n"
-                + "Чистый доход (грн.): " + model.calculateClearProfit();
+                + "Общий доход (грн.): " + profit + "\n"
+                + "Сумма налога (грн.): " + taxFromSale + "\n"
+                + "Чистый доход (грн.): " + clearProfit;
 
         view.getOutput(output);
     }
