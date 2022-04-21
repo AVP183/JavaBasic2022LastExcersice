@@ -1,6 +1,5 @@
 package utils;
-//содержащий статический
-//        метод округления значений.
+
 public abstract class Rounder {
 
     public double rounderValue(double value) {
